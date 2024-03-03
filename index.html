@@ -42,7 +42,7 @@
                     </h1>
 
                     <p class="font-medium text-2xl text-[#111]">Use Promo Code <button role="button"
-                            class="bg-[#E527B2] rounded-lg text-white font-semibold py-[14px] px-[25px] hover:bg-fuchsia-500 ml-4	">SELL200</button>
+                            class="bg-[#E527B2] btn h-full rounded-lg text-white font-semibold py-[14px] px-[25px] hover:bg-fuchsia-500 ml-4 text-2xl">SELL200</button>
                     </p>
                 </div>
 
@@ -62,12 +62,12 @@
         <!-- product contant -------- -->
 
         <section class="container mx-auto pt-28">
-            <div class="flex">
+            <div class="flex gap-6 flex-col md:flex-row">
                 <!-- product ----- -->
                 <div class="flex-1">
                     <!-- Kitchenware ------ -->
                     <div>
-                        <h1 class="font-semibold text-5xl text-[#111] mb-8">Kitchenware</h1>
+                        <h1 class="font-semibold text-4xl sm:text-5xl text-[#111] mb-8">Kitchenware</h1>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
 
                             <!-- card = 1 --------- -->
@@ -142,12 +142,42 @@
                         </div>
                     </div>
 
-
                 </div>
 
                 <!-- purchase calculation --------- -->
-                <div class="w-[350px]">
+                <div class="w-full sm:w-[350px]">
+                    <div class="bg-base-100 mb-6 p-6">
+                        <h3 class="text-2xl font-medium text-[#111] mb-4">Have Coupon?</h3>
+                        <div class="flex flex-col sm:flex-row items-center">
+                            <input class="p-4 border sm:rounded-l-lg w-4/5 mb-4 sm:mb-0" type="text" name="" id=""
+                                placeholder="Coupon code">
+                            <button
+                                class="py-4 w-[100px] btn h-full text-2xl text-white bg-[#E527B2] hover:bg-[#E527B2] sm:rounded-l-none">Apply</button>
+                        </div>
+                    </div>
 
+                    <div class="bg-base-100 p-6">
+                        <div class="mb-[10px]">
+                            <h4 class="font-medium text-2xl text-[#111] leading-[48px]">1. Home Cooker</h4>
+                            <h4 class="font-medium text-2xl text-[#111] leading-[48px]">2. Sports cates</h4>
+                            <h4 class="font-medium text-2xl text-[#111] leading-[48px]">3. Home Cooker</h4>
+                        </div>
+                        <hr>
+
+                        <div class="mt-3 mb-6">
+                            <h4 class="font-medium text-2xl text-[#111] leading-[48px]">Total price: <span
+                                    class="text-2xl font-medium text-[#11111180]">257.00TK</span></h4>
+                            <h4 class="font-medium text-2xl text-[#111] leading-[48px]">Discount: <span
+                                    class="text-2xl font-medium text-[#11111180]">51.00TK</span></h4>
+                            <h4 class="font-medium text-2xl text-[#111] leading-[48px]">Total: <span
+                                    class="text-2xl font-medium text-[#11111180]">205.00TK</span></h4>
+                        </div>
+                        <hr>
+
+                        <button
+                            class="btn h-full text-xl font-semibold text-white bg-[#E527B2] rounded-lg w-full mt-6 py-4 hover:bg-[#E527B2]">Make
+                            Purchase</button>
+                    </div>
                 </div>
             </div>
         </section>
