@@ -7,7 +7,10 @@ const applyBtn = document.getElementById('apply-btn');
 for (const product of products) {
 
     product.classList.add('cursor-pointer')
+
+    // event Listener ------------
     product.addEventListener('click', function () {
+        showToast();
 
         const totalPrice = document.getElementById('total-price');
         const totalPriceNum = parseFloat(totalPrice.innerText);
@@ -31,7 +34,6 @@ for (const product of products) {
 
         const productPrice = product.childNodes[3].childNodes[5].innerText;
         const productPriceNum = parseFloat(productPrice);
-        console.log(productPriceNum)
 
         const totalPriceSum = totalPriceNum + productPriceNum;
 
@@ -63,18 +65,48 @@ applyBtn.addEventListener('click', function () {
         discount.innerText = discountCalc;
 
         total.innerText = totalPriceNum - discountCalc;
+        couponInput.value = '';
 
-        console.log(discountCalc);
-        console.log(totalPriceNum);
+        showToast()
+        document.getElementById('toast-p').innerText = 'Coupon Applied';
 
     } else {
-        console.log('Invalid Input')
+        console.log('Invalid Coupon Code')
+        alert('Invalid Coupon Code')
+
+        couponInput.value = '';
     }
 })
 
 
-// const discount = (totalPriceNum * 20) / 100
-// console.log(discount);
+const goHome = document.getElementById('go-home');
+
+goHome.addEventListener('click', function () {
+    const couponInput = document.getElementById('coupon-input');
+
+    const cartTitle = document.getElementById('cart-title');
+
+    const totalPrice = document.getElementById('total-price');
+
+    const discount = document.getElementById('discount');
+
+    const total = document.getElementById('total');
 
 
-//  document.getElementsByClassName('product').addEventListener
+    couponInput.value = '';
+    cartTitle.innerText = '';
+    totalPrice.innerText = 0;
+    discount.innerText = 0;
+    total.innerText = 0;
+})
+
+
+function showToast() {
+    // Show the toast
+    document.getElementById("myToast").classList.remove("hidden");
+    // Hide the toast after 5 seconds (5000ms)
+    // you can set a shorter/longer time by replacing "5000" with another number
+    setTimeout(function () {
+        document.getElementById("myToast").classList.add("hidden");
+    }, 2000);
+}
