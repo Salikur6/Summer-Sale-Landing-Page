@@ -10,6 +10,7 @@ for (const product of products) {
 
     // event Listener ------------
     product.addEventListener('click', function () {
+        document.getElementById('toast-p').innerText = 'Product Added in the Cart.';
         showToast();
 
         const totalPrice = document.getElementById('total-price');
@@ -67,8 +68,9 @@ applyBtn.addEventListener('click', function () {
         total.innerText = totalPriceNum - discountCalc;
         couponInput.value = '';
 
-        showToast()
         document.getElementById('toast-p').innerText = 'Coupon Applied';
+        showToast()
+
 
     } else {
         console.log('Invalid Coupon Code')
